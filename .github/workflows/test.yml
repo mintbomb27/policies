@@ -41,6 +41,8 @@ jobs:
           curl -LO "https://dl.k8s.io/release/${{ matrix.k8s-version.version }}/bin/linux/amd64/kubectl"
       - name: Create kind cluster
         run: |
+          pwd
+          ls .github
           ./.tools/kind create cluster --image kindest/node:${{ matrix.k8s-version.version }} --config ./.github/kind.yaml
       - name: Install latest kyverno
         run: |
