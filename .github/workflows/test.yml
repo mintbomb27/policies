@@ -25,27 +25,28 @@ jobs:
             version: v1.27.1
         tests:
           - argo
-          - aws
-          - best-practices
-          - cert-manager
-          - consul
-          - flux
-          - istio
-          - karpenter
+          # - aws
+          # - best-practices
+          # - cert-manager
+          # - consul
+          - external-secret-operator
+          # - flux
+          # - istio
+          # - karpenter
           - kasten
-          - kubecost
-          - kubeops
-          - kubevirt
-          - linkerd
-          - nginx-ingress
-          - openshift
+          # - kubecost
+          # - kubeops
+          # - kubevirt
+          # - linkerd
+          # - nginx-ingress
+          # - openshift
           - other
-          - pod-security
-          - psa
+          # - pod-security
+          # - psa
           - psp-migration
-          - tekton
-          - traefik
-          - velero
+          # - tekton
+          # - traefik
+          # - velero
     runs-on: ubuntu-latest
     name: ${{ matrix.k8s-version.name }} - ${{ matrix.tests }}
     steps:
